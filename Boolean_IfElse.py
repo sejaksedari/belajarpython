@@ -152,3 +152,27 @@ else:
 
 #Example4_SIMPLE_CALCULATOR
 
+'''
+print("Operasi apa yg pengen kamu kaasih?")
+operator = input("Enter either +, -, * or /:")
+
+a = float(input("Insert first number"))
+b = float(input("Insert second number"))
+
+if operator == "+":
+    print(a, operator, b, "=", a+b)
+
+elif operator == "-":
+    print(a, operator, b, "=", a-b)    
+
+elif operator == "*":
+    print(a, operator, b, "=", a*b)
+
+elif operator == "/":
+    print(a, operator, b, "=", a/b)
+
+else:
+    print("Invalid")
+'''
+
+
