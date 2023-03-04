@@ -1,5 +1,3 @@
-#CATETAN PROGRAMMIZ FUAD
-
 # Terminal Command + Git f(x)
     # CLS -> clear terminal
     # git status -> checking file status within a specified folder
@@ -17,7 +15,7 @@
     # Link tambahan -> https://stackoverflow.com/questions/827351/push-origin-master-error-on-new-repository/6518774#6518774
 
 
-# PythonVariables_____________________________________________________________________
+# Python_Variables_____________________________________________________________________
     # Used to store data (values)
         # Eg. a = 10, b = 1.1, a & b itu variables. Bacanya, variable a storing value 10
     # Ibaratnya variable itu bag to store books in it, booksnya bisa diganti at any time
@@ -44,7 +42,20 @@
             # a = true -> error
                 # dia case sensitive, kalo kita tulis a = true -> error
             # a = True -> assigned True to the variable 'a'
-            # a = 'True' -> ga error sih, tapi 'True' is stored as string 
+            # a = 'True' -> ga error sih, tapi 'True' is stored as string
+        #  Opearator
+            # '%' modulus -> a%b -> Gives remainder after dividing a from b
+            # '**' Exponential -> 3**2 = 9
+            # '//' floor division -> 15//2 = 7 -> hasilnya kan 7.5 dibuletin ke bawah 7
+            # & and
+            # | or
+            # ^ XOR
+            # ~ NOT
+            
+
+# Opeartor List
+
+# Python_Input_and_Output
             
 
 
@@ -52,22 +63,46 @@
 # Operator&Operrands___________________________________________________________
 
 # Declare
-a = input("Insert Integer a: ")
-A = int(a)
+# a = input("Insert Integer a: ")
+# A = int(a)
 
-b = input("Insert Integer b: ")
-B = int(b)
+# b = input("Insert Integer b: ")
+# B = int(b)
 
-c = input("Insert Integer c: ")
-C = int(c)
+# c = input("Insert Integer c: ")
+# C = int(c)
 
 # Operator
-Multi = A*B*C
-Add = A+B+C
+# Multi = A*B*C
+# Add = A+B+C
 
 # Printing
-print(A, "times", B, "times", C, "equals: ", Multi)
-print(A, "add", B, "add", C, "equals: ", Add)
+# print(A, "times", B, "times", C, "equals: ", Multi)
+# print(A, "add", B, "add", C, "equals: ", Add)
 
 
-#Operator&Operrands_____________________________________________________________________________
+# Coba2___________________________________________________________
+
+# tes leap year
+# tahun yg habis dibagi 4
+# kalo century year (yg endingnya 00) dia habis dibagi 100
+# century year yag masuk ke himpunan leap year itu habis dibagi 400
+
+# tahun = 1999 (isi tahunnya)
+
+print ("Silakan input tahun yang ingin dicek apakah dia leap atau bukan")
+tahun = input ()
+tahun = int (tahun)
+
+if (tahun % 4) == 0:
+    if (tahun % 100) == 0:
+        if (tahun % 400) == 0:
+            print (tahun, 'is a leap year')
+        else:
+            print (tahun, 'is not a leap year')
+    else:
+        print (tahun, 'is not a leap year')
+else:
+    print (tahun, 'is not a leap year')
+
+
