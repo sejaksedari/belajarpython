@@ -14,6 +14,8 @@
     # Link cara commit, push, dll -> https://www.youtube.com/watch?v=eGaImwD8fPQ&ab_channel=VedTheMaster
     # Link tambahan -> https://stackoverflow.com/questions/827351/push-origin-master-error-on-new-repository/6518774#6518774
 
+#Darurat
+    #Stop the running code by pressing  CTRL + C in the terminal
 
 # Python_Variables_____________________________________________________________________
     # Used to store data (values)
@@ -57,7 +59,6 @@
 
 # Python_Input_and_Output
             
-
 
 
 # Operator&Operrands___________________________________________________________
