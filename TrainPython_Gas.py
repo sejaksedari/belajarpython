@@ -91,6 +91,8 @@
 
 # tahun = 1999 (isi tahunnya)
 
+'''
+
 print ("Silakan input tahun yang ingin dicek apakah dia leap atau bukan")
 tahun = input ()
 tahun = int (tahun)
@@ -106,4 +108,230 @@ if (tahun % 4) == 0:
 else:
     print (tahun, 'is not a leap year')
 
+'''
 
+# LearnPython FreeCodeCampOrg  _________________________________________________________
+# Link (https://youtu.be/rfscVS0vtbw)
+
+# 1
+# DATA TYPES AND VARIABLES
+'''
+
+character_name = "Tom"
+character_age = "50"
+is_male = True 
+
+print ("There once was a man named " + character_name + ", ")
+print ("He was " + character_age + " years old. ")
+
+# Store and replace variable with new value
+character_name = "Tomi-Chan"
+
+print ("He really liked the name " + character_name + ", ")
+print ("but didn't like being " + character_age + ".")
+
+# Data Type
+    # Strings = Plain text
+    # Numbers -> bisa integer (whole number) bisa float (decimal) - no need using quotation mark
+    # Boolean -> True or False -> "istrue"
+'''
+
+# 2
+# WORKING WITH STRINGS
+
+'''
+
+# \n  -> buat add enter
+# \" -> print quotation mark
+# concatenation -> combining multiple strings
+
+phrase = "Giraffe Academy"
+
+print("\n\"Giraffe\"\nAcademy\n")
+print (phrase + " is cool")
+
+# Bisa juga nambain functions to Modifiy or Get Information about our strings
+
+print (phrase.lower())
+print (phrase.upper())
+
+# Apakah phrase variable SEMUA STRINGNYA uppercase,
+# kalo gak harusnya return 0 or False
+
+print (phrase.isupper())
+print (phrase.islower()) 
+
+# bisa juga kita kasih functions yg berurutan,
+# misal mau ngasih upper case ke phrase,
+# terus dicek pake True False statement,
+# harusnya return True
+
+print (phrase.upper().isupper())
+
+# we can also figure out the length,
+# (number of character) of the string,
+
+print (len(phrase))
+
+# Get individual character inside of a string
+# Misal mau ngambil value r nya doang, start index di 0
+
+print (phrase[0])
+print (phrase[3])
+
+# Index Functions -> kita bisa cari tahu where a specific,
+# function itu sebenernya ya cuma a little collection of code that does sth, kyk Mf kalo di UE
+# character is located within our string
+# ini namanya proses passing parameter - kyk proses inverse
+# kalo kita get location dari "Acad" bakal return 8 karena
+# kata Acad distart di character ke-8 yakni a
+# kalo cari lokasi "z" dari string ga bakal ketemu, return error 
+
+print (phrase.index("G"))
+print (phrase.index("a"))
+print (phrase.index("Acad"))
+
+# ada function .replace (par1, par2), tapi kita kudu masukin 2 parameter
+# old value sama new value
+
+print (phrase.replace("Giraffe", "Elephant"))
+
+# yg barusan itu functions2 yg common, kalo mau ngulik lebih googling aja
+
+'''
+
+# 3
+# WORKING WITH NUMBERS
+
+'''
+
+print(2)
+print(2.0987)
+print(-2.0987)
+print(3+4.5)
+print(((1+1)*6)/2)
+
+# 10 modulo 3 -> 10 / 3 itu jawabannya 3 sisa 1... yg diprint oleh
+# modulus operator itu sisanya
+
+print(10 % 3)
+
+my_num = -5.2
+print(my_num)
+
+# convert my_num value into a string. why perlu convert
+# supaya number ini bisa diprint bareng string
+
+print(str(my_num) + " is my favorite number")
+
+# Number functions
+# abs - take absolute value
+# pow - pass 2 pieces of information to pow (number, the power of it)
+# max
+# min
+# round - value desimal 0.5 ke atas bakal dibuletin ke atas
+
+print (abs(my_num))
+print ("Absolute number of my_num is " + str(abs(my_num)))
+print ((pow(3, 2)))
+print (max(4,100))
+print (round(3.2))
+print (round(3.5))
+
+
+# kalo kita mau import specific python operation or function yg
+# udah kita buat bisa juga broo atau udah ada librarynya -> type: from math import *
+# kalo bahasa teknisnya "math" ini adalah MODULE, bukan library
+# floor - grab lowest number, ceil sebaliknya
+# sqrt - square root
+
+
+from math import *
+
+print (floor(2.7))
+print (ceil(2.3))
+print (sqrt(36))
+
+'''
+
+# 4
+# GETTING INPUT FROM USERS
+
+'''
+name = input("Enter yout name: ")
+age = input("Enter yout age: ")
+gender = input("Enter yout gender (Male/Female): ")
+print ("\nHello, I am " + name + "!" + "\nA " + age + " years old " + gender)
+'''
+
+# 5
+# BUILDING BASIC CALCULATOR
+
+# By default, Python convert angka ke string, makanya kudu didefine kalo ini float or int
+# Function int() or float()
+
+'''
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+add = float(num1) + float(num2) 
+
+print (add)
+'''
+
+# 6
+# Mad Libs Game
+
+'''
+color = input("Type a color: ")
+plural_noun = input("Type a plurar_noun: ")
+celebrity = input("Type a celebrity: ") 
+
+print ("Roses are " + color)
+print (plural_noun + " are blue")
+print ("I love " + celebrity)
+'''
+
+# 7
+# Lists
+
+# Penting karena kita deal with large amount of data, biar managable
+# [2:] -> 2 sampe habis listnya
+# [1:3] -> 1 sampe 2, value 3 cuma sebagai batas atas, ga include 
+
+'''
+
+friends = ["Fuad", "Kanza", "Edo", "Angel", "Isyfi"]
+
+# Revisi value inside of a python list (ganti)
+# kita juga bisa add element within a list, copy, dll.
+
+friends[1] = "JAYANTO"
+
+print (friends)
+print (friends[2])
+print (friends[-1])
+print (friends[2:])
+print (friends[1:3])
+
+'''
+
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+teman = ["Fuad", "Kanza", "Edo", "Angel", "Isyfi"]
+teman.extend(lucky_numbers)
+teman.append("Jokowi")
+teman.insert(1,"USTAD_NYEMPIL")
+teman.remove("Edo")
+
+# pop itu ngekick last emlement within a list, di sini Jokowi yg udah diappend dipop
+teman.pop()
+
+print (teman)
+
+#cari tau Isyfi itu di urutan ke-berapa
+print (teman.index("Isyfi"))
+
+#ngitung berapa kali suatu element muncul di list
+print (teman.count(15))
+
+# https://www.youtube.com/watch?v=rfscVS0vtbw&ab_channel=freeCodeCamp.org
+# Now 1:16:48
