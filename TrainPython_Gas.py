@@ -314,16 +314,16 @@ print (friends[2:])
 print (friends[1:3])
 
 '''
-
-lucky_numbers = [4, 8, 15, 16, 23, 42]
+'''
+lucky_numbers = [4, 8, 15, 16, 23, 70, 42]
 teman = ["Fuad", "Kanza", "Edo", "Angel", "Isyfi"]
-teman.extend(lucky_numbers)
-teman.append("Jokowi")
-teman.insert(1,"USTAD_NYEMPIL")
-teman.remove("Edo")
+teman.extend (lucky_numbers)
+teman.append ("Jokowi")
+teman.insert (1,"USTAD_NYEMPIL")
+teman.remove ("Edo")
 
 # pop itu ngekick last emlement within a list, di sini Jokowi yg udah diappend dipop
-teman.pop()
+teman.pop ()
 
 print (teman)
 
@@ -335,3 +335,21 @@ print (teman.count(15))
 
 # https://www.youtube.com/watch?v=rfscVS0vtbw&ab_channel=freeCodeCamp.org
 # Now 1:16:48
+
+#SortingNomer_
+
+print (lucky_numbers)
+
+lucky_numbers.sort ()
+print (lucky_numbers)
+
+lucky_numbers.reverse ()
+print (lucky_numbers)
+
+teman2 = teman.copy()
+print (teman2)
+'''
+
+# 8
+# Tuples
+
