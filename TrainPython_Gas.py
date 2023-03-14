@@ -384,3 +384,4 @@ print (tupleinsidelist)
 # F(x) = collection of code which performs a specific task
 # kalo mau do that task, tinggal call aja functionsnya
 # biar ada chunking! dan lebih modular
+# Commit V12
