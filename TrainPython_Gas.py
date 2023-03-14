@@ -354,3 +354,33 @@ print (teman2)
 # Tuples
 
 # tes V11
+
+# 8
+# TUPLES
+'''
+# tes V11
+# Tuple = type of data structure -> A Container where we can store different value. Mirip sama list. Tapi ada bedanya ->
+
+# Tuple is IMMUTABLE (Can't be changed or modified)
+# Tuple pake (), sedangkan list pake []
+
+coordinates = (4, 5)
+
+# 4 itu index position 0 dan 5 itu index position 1
+# kalo kita ganti value dalem tuples -> misal:
+# coordinates[1] =  10
+# bakal return Error, jadi 4 ga bisa diganti 10
+
+print (coordinates[0])
+print (coordinates[1])
+
+tupleinsidelist = [(4, 5), (6, 7), (80, 34)]
+print (tupleinsidelist)
+'''
+
+# 9
+# FUNCTIONS
+
+# F(x) = collection of code which performs a specific task
+# kalo mau do that task, tinggal call aja functionsnya
+# biar ada chunking! dan lebih modular
