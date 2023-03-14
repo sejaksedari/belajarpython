@@ -385,3 +385,43 @@ print (tupleinsidelist)
 # kalo mau do that task, tinggal call aja functionsnya
 # biar ada chunking! dan lebih modular
 # Commit V12
+
+'''
+# make function
+def say_hi():
+    print("Hello User")
+
+# call the function
+print ("top")
+say_hi ()
+print ("bottom")
+
+# coba digabung sama input
+name = input("Tulis Namamu: ")
+age = input("Tulis Umurmu: ")
+
+def say_hiv2 (name, age):
+    print ("Hello " + name + ", you are " + str(age))
+
+say_hiv2 (name, age)
+'''
+
+'''
+# add additional info to the f(x) -> parameters
+say_hiv2 ("Joe, ", "35")
+say_hiv2 ("Mike, ", "10")
+say_hiv2 ("Steve, ", "5")
+'''
+
+# 10
+# RETURN STATEMENTS in python f(x)
+
+def cube(num):
+    return float(num)*float(num)*float(num)
+
+# !!!! setelah return statement ga bisa ditambahin statement lain kyk print dll. return will breaks out the functions, ibaratnya diterminate.
+
+num = input("Type a number: ")
+print(str(num) + " cubed equals: " + str(cube(num)))
+
+# Now at 1:40:10 - IF Statements
