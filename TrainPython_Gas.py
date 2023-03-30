@@ -137,7 +137,7 @@ print ("but didn't like being " + character_age + ".")
 '''
 
 # 2
-# WORKING WITH STRINGS
+# WORKING WITH STRINGS______________________________________
 
 '''
 
@@ -201,7 +201,7 @@ print (phrase.replace("Giraffe", "Elephant"))
 '''
 
 # 3
-# WORKING WITH NUMBERS
+# WORKING WITH NUMBERS______________________________________
 
 '''
 
@@ -255,7 +255,7 @@ print (sqrt(36))
 '''
 
 # 4
-# GETTING INPUT FROM USERS
+# GETTING INPUT FROM USERS_________________________________
 
 '''
 name = input("Enter yout name: ")
@@ -265,7 +265,7 @@ print ("\nHello, I am " + name + "!" + "\nA " + age + " years old " + gender)
 '''
 
 # 5
-# BUILDING BASIC CALCULATOR
+# BUILDING BASIC CALCULATOR________________________________
 
 # By default, Python convert angka ke string, makanya kudu didefine kalo ini float or int
 # Function int() or float()
@@ -279,7 +279,7 @@ print (add)
 '''
 
 # 6
-# Mad Libs Game
+# Mad Libs Game____________________________________________
 
 '''
 color = input("Type a color: ")
@@ -292,7 +292,7 @@ print ("I love " + celebrity)
 '''
 
 # 7
-# Lists
+# Lists____________________________________________________
 
 # Penting karena kita deal with large amount of data, biar managable
 # [2:] -> 2 sampe habis listnya
@@ -351,7 +351,7 @@ print (teman2)
 '''
 
 # 8
-# Tuples
+# Tuples__________________________________________________
 
 # tes V11
 
@@ -379,7 +379,7 @@ print (tupleinsidelist)
 '''
 
 # 9
-# FUNCTIONS
+# FUNCTIONS_______________________________________________
 
 # F(x) = collection of code which performs a specific task
 # kalo mau do that task, tinggal call aja functionsnya
@@ -413,9 +413,11 @@ say_hiv2 ("Mike, ", "10")
 say_hiv2 ("Steve, ", "5")
 '''
 
-# 10
-# RETURN STATEMENTS in python f(x)
+#Lanjutan if statements
 
+# 10
+# RETURN STATEMENTS in python f(x)__________________________
+'''
 def cube(num):
     return float(num)*float(num)*float(num)
 
@@ -423,5 +425,142 @@ def cube(num):
 
 num = input("Type a number: ")
 print(str(num) + " cubed equals: " + str(cube(num)))
-
+'''
 # Now at 1:40:10 - IF Statements
+
+# 11
+# IF Statements_____________________________________________
+
+# Statemetn Examples
+
+# I wake up
+# If I'm hungry (Conditions: True/False)
+    # I eat breakfast (Action if true)
+
+# I leave my house
+# If it's cloudy
+    # I bring an umbrella (Action if true)
+# otherwise
+    # I bring sunglasses (Action if false)
+
+# I'm at a restaurant
+# If I want meat
+    # I order a steak (Action if true)
+# otherwise if I want pasta
+    # I order spaghetti & meatballs (Action if previous false)
+# otherwise
+    # I order a salad (Action if previous false)
+
+'''
+# Create boolean_var
+is_male = False
+is_tall = False
+
+#if statements: or
+if is_male or is_tall:
+    print ("he is male or tall or both\n")
+else:
+    print ("he neither male nor tall")
+
+is_male2 = True
+is_tall2 = True
+
+#ifstatements: and
+if is_male2 and is_tall2:
+    print ("he2 is tall male\n")
+else:
+    print ("he2 is either nor male or not tall or both")
+'''
+'''
+def max_num (num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        print (str(num1) + " is the largest")
+    elif num2 >= num1 and num2 >= num3:
+        print (str(num2) + " is the largest")
+    else:
+        print (str(num3) + " is the largest")
+
+max_num (7, 212, 3)
+'''
+
+# 12
+# Building a better Calculator_____________________________
+
+'''
+num1 = float (input ("Enter first number:"))
+# Usually kalo kita get input dari user bakal dibaca sbg string, makanya kudu diconvert inputnya ke float or int
+
+op = input ("Enter the operator: ")
+num2 = float (input ("Enter second number:"))
+
+if op == '+':
+    print (num1 + num2)
+elif op == '-':
+    print (num1 - num2)
+elif op == '*':
+    print (num1 * num2)
+elif op == '/':
+    print (num1/num2)
+else:
+    print ("Invalid. you should use + - * or /")
+'''
+
+# 13
+# Dictionary_______________________________________________________
+
+# Semacam structure di python buat ngebantu kita untuk stor info (KEY VALUE PAIR)
+# di kamus ada 2 item -> 1. word dan 2. definition associated to that word
+# di case ini, 1. key = word, 2. value = definition
+# pake CURLY BRACKET!
+
+# Task
+# Jan -> January
+# Mar -> March
+# 4 -> April (kita bisa pake number buat key, as long as it uniques)
+
+'''
+monthConversions = {
+    "Jan" : "January",
+    "Feb" : "February",
+    "Mar" : "March",
+    4 : "April",
+    "May" : "May",
+    "Jun" : "June",
+    "Jul" : "July",
+}
+
+print (monthConversions["Jul"])
+print (monthConversions.get("Jul"))
+
+# bisa pake box bracket bisa pake .get function
+# kalo pake .get function, kita bisa specify a default value kalo key not found
+
+print (monthConversions.get("Lov", "Key ini gak ada di library"))
+print (monthConversions.get(4))
+'''
+
+# 14
+# While Loop_______________________________________________________
+
+'''
+i = 1
+while i <= 10:
+    print (i)
+    # i = i + 1
+    i += 1
+
+print ("\nDone with loop\n")
+'''
+
+# 15
+# Build A Guessing Game____________________________________________
+
+secret_word = "fuad"
+guess = ""
+
+while guess != secret_word:
+    guess = input("Type the secret word: ")
+
+print ("Bener!")
+
+# Now at 2:23:56
