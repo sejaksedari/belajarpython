@@ -267,10 +267,11 @@ print ("\nHello, I am " + name + "!" + "\nA " + age + " years old " + gender)
 # 5
 # BUILDING BASIC CALCULATOR________________________________
 
+'''
 # By default, Python convert angka ke string, makanya kudu didefine kalo ini float or int
 # Function int() or float()
 
-'''
+
 num1 = input("Enter a number: ")
 num2 = input("Enter another number: ")
 add = float(num1) + float(num2) 
@@ -292,13 +293,13 @@ print ("I love " + celebrity)
 '''
 
 # 7
-# Lists____________________________________________________
+# Lists__________________________________________________
+
+'''
 
 # Penting karena kita deal with large amount of data, biar managable
 # [2:] -> 2 sampe habis listnya
 # [1:3] -> 1 sampe 2, value 3 cuma sebagai batas atas, ga include 
-
-'''
 
 friends = ["Fuad", "Kanza", "Edo", "Angel", "Isyfi"]
 
@@ -379,14 +380,14 @@ print (tupleinsidelist)
 '''
 
 # 9
-# FUNCTIONS_______________________________________________
+# FUNCTIONS_____________________________________________
 
+'''
 # F(x) = collection of code which performs a specific task
 # kalo mau do that task, tinggal call aja functionsnya
 # biar ada chunking! dan lebih modular
 # Commit V12
 
-'''
 # make function
 def say_hi():
     print("Hello User")
@@ -431,6 +432,7 @@ print(str(num) + " cubed equals: " + str(cube(num)))
 # 11
 # IF Statements_____________________________________________
 
+'''
 # Statemetn Examples
 
 # I wake up
@@ -450,6 +452,7 @@ print(str(num) + " cubed equals: " + str(cube(num)))
     # I order spaghetti & meatballs (Action if previous false)
 # otherwise
     # I order a salad (Action if previous false)
+'''
 
 '''
 # Create boolean_var
@@ -506,8 +509,9 @@ else:
 '''
 
 # 13
-# Dictionary_______________________________________________________
+# Dictionary_____________________________________________
 
+'''
 # Semacam structure di python buat ngebantu kita untuk stor info (KEY VALUE PAIR)
 # di kamus ada 2 item -> 1. word dan 2. definition associated to that word
 # di case ini, 1. key = word, 2. value = definition
@@ -518,7 +522,6 @@ else:
 # Mar -> March
 # 4 -> April (kita bisa pake number buat key, as long as it uniques)
 
-'''
 monthConversions = {
     "Jan" : "January",
     "Feb" : "February",
@@ -553,14 +556,165 @@ print ("\nDone with loop\n")
 '''
 
 # 15
-# Build A Guessing Game____________________________________________
+# Build A Guessing Game__________________________________________________
 
+'''
+# Variable List
 secret_word = "fuad"
 guess = ""
+guess_count = 0 # buat keep track aja berapa kali user udah ngeinput
+guess_limit = 3 # batas atas guesses
+out_of_guesses = False
 
-while guess != secret_word:
-    guess = input("Type the secret word: ")
+# while terus ngeloop selama 2 kondisi berikut TERPENUHI: as long as salah kata DAN slot masih ada
+while guess != secret_word and not(out_of_guesses):
+    if guess_count < guess_limit:
+        guess = input("Type the secret word: ")
+        guess_count += 1
+    else:
+        out_of_guesses = True
 
-print ("Bener!")
-
+if out_of_guesses:
+    print("Out of guesses, You Lose!")
+else:    
+    print ("Bener, You Win!")
 # Now at 2:23:56
+'''
+
+# 16
+# For Loop_____________________________________________
+
+'''
+friends = ["Denta", "Ojan", "Valdi"]
+
+for name in friends:
+    print (name)
+
+print ("\n")
+
+for letter in "Aku":
+    print (letter)
+
+print ("\n")
+
+for index in range(4):
+    print (index)
+    # angka n di range(n) ga masuk print list
+
+print ("\n")
+
+for a in range(3,5):
+    print (a)
+
+print ("\n")
+
+print (len(friends))
+
+print ("\n")
+
+for index in range(5):
+    if index == 0:
+        print ("first iteration")
+    else:
+        print ("Not first")
+'''
+        
+# 17
+# Exponent Functions__________________________________
+# 2:41:21
+'''
+print(2**3)
+print("\n")
+
+# bikin functions buat power
+def raise_to_power(base_num, pow_num):
+    
+    # bikin variable buat storing the math work result
+    result = 1
+    
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+
+print (raise_to_power(2, 3))
+'''
+
+# 18
+# 2D Lists & Nested Loops_____________________________
+'''
+number_grid = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+]
+
+# [row][col] -> mulainya dari 0
+print (number_grid[0][2])
+print ("\n")
+
+for row in number_grid:
+    print(row)
+
+print ("\n")
+
+for row in number_grid:
+    for col in row:
+        print(col)
+'''
+
+# 19
+# Build a Translator___________________________________
+
+'''
+# Giraffe Language
+# all vowels (a, i, u, e, o) -> g
+# dog -> dgg
+# cat -> cgt
+
+def translate (phrase):
+    
+    # bikin variable buat storing the translation result
+    translation = ""
+
+    for letter in phrase:
+        if letter.lower() in "aiueo":
+            if letter.isupper():
+                translation =  translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+    return translation
+
+print (translate(input("Enter a phrase: ")))
+'''
+
+# 20
+# Try Except___________________________________________
+
+'''
+# Cara catching errors in Python
+# kita juga bisa catch specific type of error misal division by 0
+# sebisa mungkin error yg diexcept itu SPESIFIK
+
+try:
+    number = int(input("Enter a number: "))
+    print (number)
+
+# kalo user nulis selain number, bakal generate kata2 ini. jadi kyk diarahin buat nulis sesuai perintah enter a NUMBER
+except ValueError:
+    print ("Invalid Input")
+
+try:
+    value = 10/0
+except ZeroDivisionError:
+    print("Divided by Zero")
+'''
+
+# 21
+# Reading, Writing, Append Files____________________
+# SKIPPED
+
+# 22
+# Modules and PIP
