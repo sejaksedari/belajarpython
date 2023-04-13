@@ -53,13 +53,11 @@
             # | or
             # ^ XOR
             # ~ NOT
-            
 
 # Opeartor List
 
 # Python_Input_and_Output
             
-
 
 # Operator&Operrands___________________________________________________________
 
@@ -713,8 +711,39 @@ except ZeroDivisionError:
 '''
 
 # 21
-# Reading, Writing, Append Files____________________
+# Reading, Writing, Append Files___________________________________
 # SKIPPED
 
 # 22
-# Modules and PIP
+# Modules and PIP__________________________________________________
+# Modules -> External Py files
+    # Sebenernya module itu py files lain yg udah kita build yg isinya banyak functional stuff dan bisa diimport ke current py files
+    # bisa import variables, functions, dll. 
+# cari aja di google "list of python modules" nanti tinggal kita import trs bisa dipake 
+    # Cara pake gimana? apalagi kalo modulenya dari web?
+    # ada 2 jenis module: built-in (internal python) sama external (bpy punya blender misal)
+    # google aja, trs pake: pip install "pyhton_module_yg_pengen_diinstall"
+
+# 23
+# Classes and Objects________________________________
+# butuh define our own data types
+    # banyak data type -> strings, integer, float, boolean, etc.
+    # tapi ga semua data or info represented using string, number, boolean.
+    # misal person, jenis hp, dll.
+    # makanya kita butuh biki OUR OWN DATA TYPES
+    # pake Class
+
+# import class dari Student.py
+    # Class itu semacam OVERVIEW of What The Student Data Type is
+    # Object itu the actual student, bukan templatenya doang kyk class
+
+'''
+from Student import Student_Class
+
+student1 = Student_Class("Fuad", "TI", 3.9, False)
+student2 = Student_Class("Qla", "TI", 4, True)
+
+print(student1.name)
+'''
+
+# NOW 3:57:37
