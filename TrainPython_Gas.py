@@ -14,6 +14,12 @@
     # Link cara commit, push, dll -> https://www.youtube.com/watch?v=eGaImwD8fPQ&ab_channel=VedTheMaster
     # Link tambahan -> https://stackoverflow.com/questions/827351/push-origin-master-error-on-new-repository/6518774#6518774
 
+# ShorcutKeren
+    # alt + shift + n = run
+    # shift + alt + arrowdown = copy paste that line
+    # ctrl + enter = create new line code
+    # alt + down arrow = geser line ke bawah
+
 #Darurat
     #Stop the running code by pressing  CTRL + C in the terminal
 
