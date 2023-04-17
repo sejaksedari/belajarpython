@@ -221,6 +221,125 @@ print('x is y =',hasil)
 '''
 
 
+# 11 ________________________________________________________________________
+# Operasi Logika Boolean
+
+'''
+# NOT
+a = False
+c = not a
+print('data a =', a)
+print('data c =', c)
+
+# OR - At least salah satu true
+a = False
+b = False
+c = a or b
+print(a, 'or', b, '=', c)
+a = True
+b = False
+c = a or b
+print(a, 'or', b, '=', c)
+
+# AND - 22nya must be True for return True
+
+# XOR - True kalo SALAH SATU SAJA TRUE,
+print("\n") 
+print('====XOR====')
+a = False
+b = False
+c = a ^ b
+print(a,'XOR',b,'=',c)
+a = False
+b = True
+c = a ^ b
+print(a,'XOR',b,' =',c)
+a = True
+b = False
+c = a ^ b
+print(a,' XOR',b,'=',c)
+a = True
+b = True
+c = a ^ b
+print(a,' XOR',b,' =',c)
+'''
+
+# 12 ________________________________________________________________________
+# Latihan Komparasi dan Logika
+
+# SOAL 1
+# ++++++3--------10+++++++
+
+# Jawaban 1A
+'''
+UserInput = float(input("Masukkan angka kurang dari 3 or lebih dari 10: "))
+if( 3 < UserInput and UserInput < 10):
+    print(False)
+elif(UserInput == 3):
+    print(False)
+elif(UserInput == 10):
+    print(False)
+else:
+    print(True)
+'''
+
+# JAWABAN 1B
+'''
+UserInput = float(input("Masukkan angka kurang dari 3 or lebih dari 10: "))
+
+IsLower = (UserInput < 3)
+IsUpper = (UserInput > 10)
+if(IsLower or IsUpper):
+    print("Anda Benar! Angka ", UserInput, "lebih kecil dari 3 atau lebih besar dari 10")
+else:
+    print("Anda Salah")
+'''
+
+# SOAL 2
+# -------0++++++5--------8++++++11----------
+# 0 False, 0.2 True, 9 True, 11 False
+
+# JAWABAN 2A
+'''
+UserInput = float(input("Masukkan angka antara (0 dan 5) atau (8 dan 11): "))
+if( 0 < UserInput < 11):
+    if( 5 < UserInput < 8):
+        print (False)
+    elif(UserInput == 5):
+        print(False)
+    elif(UserInput == 8):
+        print(False)
+    else:
+        print(True)
+else:
+    print(False)
+'''
+
+# +++++++0-------5+++++++8-------11+++++++
+# JAWABAN 2A
+'''
+UserInput = float(input("Masukkan angka antara (0 dan 5) atau (8 dan 11): "))
+if( 0 < UserInput < 11):
+    if( 5 < UserInput < 8):
+        print (True)
+    elif(UserInput == 5):
+        print(False)
+    elif(UserInput == 8):
+        print(False)
+    else:
+        print(False)
+elif(UserInput == 0):
+        print(False)
+elif(UserInput == 11):
+        print(False)
+else:
+    print(True)
+'''
+
+# 13 ________________________________________________________________________
+# Operator Bitwise
+# BARU SAMPE SINI
+
 
 # 58 ________________________________________________________________________
 # Standard Library 
