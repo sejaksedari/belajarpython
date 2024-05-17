@@ -5,7 +5,7 @@
 
 # 1 ________________________________________________________________________
 # Apa itu Python 
-
+# Hello Update Nih
 
 # 3 ________________________________________________________________________
 # Cara kerja program dan bytecode
@@ -341,6 +341,9 @@ else:
 # BARU SAMPE SINI
 
 
+
+
+
 # 58 ________________________________________________________________________
 # Standard Library 
 '''
@@ -372,4 +375,5 @@ data_count = Counter(data)
 print(f"data count = {data_count}\n")
 print(f"jumlah a = {data_count['a']}\n")
 print(f"jumlah d = {data_count['d']}\n")
+
 '''
