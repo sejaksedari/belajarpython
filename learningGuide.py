@@ -17,8 +17,8 @@ cd "link of folder" (go to specific folder)
 
 # Cara run py code: atau py "namafile.py"
 # Cara cek versi Python di terminal = "python --version"
-# single line comment: # (commented line)
-# multi line comment: ''' (commented multiline) '''
+# single line comment: # "commented line"
+# multi line comment: ''' "commented multiline" '''
 # cara mindahin line code: alt + arrow
 # cara copy past line code: alt + + shift + arrow
 
