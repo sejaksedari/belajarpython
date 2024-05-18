@@ -4,33 +4,35 @@
 # Long Term Goal --> LookDev or TD @WetaFX
 # Course link: https://www.youtube.com/watch?v=LWIzgB8NOyk&list=PLZS-MHyEIRo59lUBwU-XHH7Ymmb04ffOY&index=60&ab_channel=KelasTerbuka
 
-# ///////////////////////
-# NOW: 4 Variable
 
-
+# //////////////////////////////////////////
 # ///// 1 APA ITU PYTHON________________________________________________________________________ 
-    # Hello Update Nih
 
+# Hello Update Nih
+
+# //////////////////////////////////////////
 # ///// 3 CARA KERJA PROGRAM DAN BYTECODE_______________________________________________________
-    # python itu bahasa pemrograman yg interpreted, jd lgsg run tanpa kudu bikin compiled versionnya
-    # Interpreted
-        # Source code: "OpenClass_python.py" -> Interpreter: "Python 3.10.6" -> Terminal/Dijalankan
-    # Compiled
-        # Source code -> Compiler: C++ -> .exe
-    # kita bisa ngompile python ke BYTECODE (compiled version of python, mirip cara kerja compiled code .exe, lebih efisien). kalo ditampilin di interpret biasanya makan waktu buat translasi. nah, kalo dicompile ke bytecode. runningnya lebih kentjeng. YANG DICOMPILE bakal lebih CEPET drpada yg di INTERPRET. Nanti jadi .pyc frmat filenya
-        # ketik di terminal buat compile: python -m py_compile (namafile).py
-        # masuk ke folder __pycache__: cd __pycache__
-        # Cara run compiled pyc code: python (namafile).cpython-(nomorygtertera).pyc
 
-    # Cara run py code: atau py "namafile.py"
-    # Cara cek versi Python di terminal = "python --version"
-    # single line comment: # (commented line)
-    # multi line comment: ''' (commented multiline) '''
-    # cara mindahin line code: alt + arrow
-    # cara copy past line code: alt + + shift + arrow
+# python itu bahasa pemrograman yg interpreted, jd lgsg run tanpa kudu bikin compiled versionnya
+# Interpreted
+    # Source code: "OpenClass_python.py" -> Interpreter: "Python 3.10.6" -> Terminal/Dijalankan
+# Compiled
+    # Source code -> Compiler: C++ -> .exe
+# kita bisa ngompile python ke BYTECODE (compiled version of python, mirip cara kerja compiled code .exe, lebih efisien). kalo ditampilin di interpret biasanya makan waktu buat translasi. nah, kalo dicompile ke bytecode. runningnya lebih kentjeng. YANG DICOMPILE bakal lebih CEPET drpada yg di INTERPRET. Nanti jadi .pyc frmat filenya
+    # ketik di terminal buat compile: python -m py_compile (namafile).py
+    # masuk ke folder __pycache__: cd __pycache__
+    # Cara run compiled pyc code: python (namafile).cpython-(nomorygtertera).pyc
 
+# Cara run py code: atau py "namafile.py"
+# Cara cek versi Python di terminal = "python --version"
+# single line comment: # (commented line)
+# multi line comment: ''' (commented multiline) '''
+# cara mindahin line code: alt + arrow
+# cara copy past line code: alt + + shift + arrow
 
+# //////////////////////////////////////////
 # ///// 4 MENGENAL VARIABLE_______________________________________________________________
+
 # Ternyata >>> itu Shell
     # caranya masuk shell tinggal ketik py terus enter, keluarnya CTRL + Z terus enter
 # Variable Assignment
@@ -39,8 +41,7 @@
     # 10juta =  10000000 # angka ga boleh di depan
     # juta 10 = 10000000 # ga boleh ada spasi
 
-# Example
-
+# Example ...
 '''
 # Variable Assignment
 a = 10 # a adalah variable dengan value 10
@@ -69,11 +70,11 @@ print ("nilai b =", b)
 
 '''
 
-
+# //////////////////////////////////////////
 # ///// 5 TIPE DATA___________________________________________________________________
 
-
-# """
+# Example ...
+"""
 data_integer = 1
 a = 1
 b = 1.2
@@ -95,14 +96,27 @@ print(type(d)) #string
 print(type(e)) #bool
 print("data: ", f, "bertipe: ", type(f)) #complex 5 + 6j
 print("data: ", g, "bertipe: ", type(g)) #ctypes.c_double
-# """
+"""
 
-# ///// 6 ________________________________________________________________________
-# Casting Tipe Data
+# //////////////////////////////////////////
+# ///// 6 CASTING TIPE DATA __________________________________________________________
+
 # Merubah suatu tipe data ke tipe data lain
 # https://github.com/kelasterbuka/Python3.x_Dasar_Programming/blob/master/Episode%2006%20-%20Casting%20Tipe%20Data/Main.py 
 
+# buat string, kalo mau dicast jadi int float atau bool harus berupa ANGKA, bukan text
+    # misal data_str = "10" --> int = 10, float = 10.0, bool = True
+    # misal data_str = "0" --> int = 0, float = 10.0, bool = True
+    # data_str = "Sepuluh" --> error all except bool = True
+    # data_str = "False" --> error all except bool = True
+    # data str = "" --> Output: "False", jadi string kosong menghasilkan output bool: false
+# bool hanya false kalo nilai integer 0 or float 0.0
+# casting syntax: int(), float(), str(), bool()
+# float = 9.9, kalo dicast jadi integer akan jadi 9 (pembulatan bawah)
+
+# Example ...
 '''
+print("\n___INTEGER INPUT___\n")
 data_int = 9
 print("data = ", data_int, ",type = ", type(data_int))
 
@@ -110,28 +124,50 @@ data_float = float(data_int)
 data_str = str(data_int)
 data_bool = bool(data_int) # false kalo nilai integer 0
 
-print("___CASTED___")
+print("\n___INTEGER CASTED___\n")
 print("data = ", data_float, ",type =", type(data_float))
 print("data = ", data_str, ",type =", type(data_str))
 print("data = ", data_bool, ",type =", type(data_bool))
 
-# buat string, kalo mau dicast jadi int float atau bool harus berupa angka, bukan text
+print("\n___STR INPUT___\n")
+data2_str = "False"
+data3_str = ""
+print("data = ", data2_str, ",type = ", type(data2_str))
+print("data = ", data3_str, ",type = ", type(data3_str))
+
+data2_bool = bool(data2_str)
+data3_bool = bool(data3_str)
+
+print("\n___STR CASTED TO BOOL___\n")
+print("data = ", data2_bool, ",type =", type(data2_bool)) # Jika Input: "False" --> Output: "True"
+print("data = ", data3_bool, ",type =", type(data3_bool)) # Jika Input: "" --> Output: "False"
 '''
 
-# ///// 7 ________________________________________________________________________
-# Get Input from User
+# //////////////////////////////////////////
+# ///// 7 GET INPUT FROM USER ____________________________________________________________
 
-# data yg dimasukin pasti string
+# data INPUT pasti bertipe STRING
+# makanya tadi kita belajar CASTiNG dulu biar bisa convert user input
 # kalo mau ambil int or float , convert string tadi ke int or float
 # kalo mau ambil true false or boolean, pake 1 0 biner aja
 
+# Example ...
 '''
-biner = bool(int(input("masukan nilai boolean (1 = True / 0 = False): ")))
-print("data = ", biner,", type=", type(biner))
+nama = str(input("Tolong ketik namamu:\n"))
+print("\n")
+inputUser = input("Masukan nilai boolean (1 = True / 0 = False):\n")
+# cast string to int dulu biar bisa dibaca oleh casting bool
+# kalo maksa tulis bool(inputUser), input 1/0 selalu dibaca string "1"/"0", yg keduanya: "True"
+# kalo dah belajar if.. then.. kita bisa pake cara lain nanti
+biner = bool(int(inputUser))
+print("\n")
+print("Hai", nama, ", karena kamu memilih", inputUser, ", maka kamu =", biner,", type=", type(biner))
 '''
 
-# ///// 8 ________________________________________________________________________
-# Arithmetic Operation
+# //////////////////////////////////////////
+# ///// 8 ARITHMETIC OPERATION ___________________________________________________
+
+
 
 '''
 # operasi aritmatika
