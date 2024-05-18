@@ -1,57 +1,103 @@
 
 # INGET GOALS BELAJAR PYTHON
-# Buat understanding logical thinking buat dipake scripting di Blender maupun Unreal Engine. Jadi next abis paham basic2nya, lgsg cari tutorial Python for Blender atau Python for Unreal
+# Buat understanding logical thinking buat dipake scripting or Automation tools di Blender, Unreal Engine, Houdini, dan Nuke . Jadi next abis paham basic2nya, lgsg cari tutorial Python for "Software Context"
+# Long Term Goal --> LookDev or TD @WetaFX
 # Course link: https://www.youtube.com/watch?v=LWIzgB8NOyk&list=PLZS-MHyEIRo59lUBwU-XHH7Ymmb04ffOY&index=60&ab_channel=KelasTerbuka
 
-# 1 ________________________________________________________________________
-# Apa itu Python 
-# Hello Update Nih
-
-# 3 ________________________________________________________________________
-# Cara kerja program dan bytecode
-# python itu bahasa pemrograman yg interpreted, jd lgsg run tanpa kudu bikin compiled versionnya
-# Interpreted
-    # Source code -> Python -> Terminal
-# Compiled
-    # Source code -> C++ -> .exe
-# kita bisa ngompile python ke bytecode. kalo ditampilin di interpret biasanya makan waktu buat translasi. nah, kalo dicompile ke bytecode. runningnya lebih kentjeng. YANG DICOMPILE bakal lebih CEPET drpada yg di INTERPRET.
-    # ketik di terminal buat compile: python -m py_compile (namafile).py
-    # masuk ke folder __pycache__: cd __pycache__
-    # run: python (namafile).cpython-(nomorygtertera).pyc
+# ///////////////////////
+# NOW: 4 Variable
 
 
-# 4 ________________________________________________________________________
-# Mengenal Variable
-# 10juta =  10000000 # angka ga boleh di depan
-# juta 10 = 10000000 # ga boleh ada spasi
+# ///// 1 APA ITU PYTHON________________________________________________________________________ 
+    # Hello Update Nih
+
+# ///// 3 CARA KERJA PROGRAM DAN BYTECODE_______________________________________________________
+    # python itu bahasa pemrograman yg interpreted, jd lgsg run tanpa kudu bikin compiled versionnya
+    # Interpreted
+        # Source code: "OpenClass_python.py" -> Interpreter: "Python 3.10.6" -> Terminal/Dijalankan
+    # Compiled
+        # Source code -> Compiler: C++ -> .exe
+    # kita bisa ngompile python ke BYTECODE (compiled version of python, mirip cara kerja compiled code .exe, lebih efisien). kalo ditampilin di interpret biasanya makan waktu buat translasi. nah, kalo dicompile ke bytecode. runningnya lebih kentjeng. YANG DICOMPILE bakal lebih CEPET drpada yg di INTERPRET. Nanti jadi .pyc frmat filenya
+        # ketik di terminal buat compile: python -m py_compile (namafile).py
+        # masuk ke folder __pycache__: cd __pycache__
+        # Cara run compiled pyc code: python (namafile).cpython-(nomorygtertera).pyc
+
+    # Cara run py code: atau py "namafile.py"
+    # Cara cek versi Python di terminal = "python --version"
+    # single line comment: # (commented line)
+    # multi line comment: ''' (commented multiline) '''
+    # cara mindahin line code: alt + arrow
+    # cara copy past line code: alt + + shift + arrow
 
 
-# 5 ________________________________________________________________________
-# Tipe Data
+# ///// 4 MENGENAL VARIABLE_______________________________________________________________
+# Ternyata >>> itu Shell
+    # caranya masuk shell tinggal ketik py terus enter, keluarnya CTRL + Z terus enter
+# Variable Assignment
+    # di Python, ga ada variable declaration kyk JS misal int a = 2, let b = "big", jadi langsung assignment 
+# Varibale Naming
+    # 10juta =  10000000 # angka ga boleh di depan
+    # juta 10 = 10000000 # ga boleh ada spasi
 
-"""
+# Example
+
+'''
+# Variable Assignment
+a = 10 # a adalah variable dengan value 10
+x = 5
+panjang = 1000
+sepuluhjuta = 10000000
+
+# Pemanggilan Pertama
+print ("nilai a =", a)
+print ("nilai x =", x)
+print ("nilai panjang =", panjang)
+print ("sepuluhjuta =", sepuluhjuta)
+
+# Pemanggilan Kedua var a
+print ("nilai a =", a)
+
+# Direct Assignment  Variable a di tengah2
+a = 7
+
+# Pemanggilan Ketiga var a, berubah jadi 7
+print ("nilai a =", a)
+
+# Indirect Assignment var a to var b
+b = a
+print ("nilai b =", b)
+
+'''
+
+
+# ///// 5 TIPE DATA___________________________________________________________________
+
+
+# """
+data_integer = 1
 a = 1
 b = 1.2
 c = "1"
 d = "satu 1"
 e = True
-f = complex(5,6) # complex numb, complex(realnumb, imaginer)
+f = complex(5,6) # complex numb, complex(realnumb, imaginer), 5+6j
 
 # manggil or import tipe data dari C language
 from ctypes import c_double, c_char, c_long
 
 g = c_double(10.581249182317391)
 
-print(type(a))
-print(type(b))
-print(type(c))
-print(type(d))
-print(type(e))
-print(type(f)) 
-print(type(g))
-"""
+print("data: ", data_integer, "bertipe: ", type(data_integer))
+print(type(a)) #int
+print(type(b)) #float
+print(type(c)) #string
+print(type(d)) #string
+print(type(e)) #bool
+print("data: ", f, "bertipe: ", type(f)) #complex 5 + 6j
+print("data: ", g, "bertipe: ", type(g)) #ctypes.c_double
+# """
 
-# 6 ________________________________________________________________________
+# ///// 6 ________________________________________________________________________
 # Casting Tipe Data
 # Merubah suatu tipe data ke tipe data lain
 # https://github.com/kelasterbuka/Python3.x_Dasar_Programming/blob/master/Episode%2006%20-%20Casting%20Tipe%20Data/Main.py 
@@ -72,7 +118,7 @@ print("data = ", data_bool, ",type =", type(data_bool))
 # buat string, kalo mau dicast jadi int float atau bool harus berupa angka, bukan text
 '''
 
-# 7 ________________________________________________________________________
+# ///// 7 ________________________________________________________________________
 # Get Input from User
 
 # data yg dimasukin pasti string
@@ -84,7 +130,7 @@ biner = bool(int(input("masukan nilai boolean (1 = True / 0 = False): ")))
 print("data = ", biner,", type=", type(biner))
 '''
 
-# 8 ________________________________________________________________________
+# ///// 8 ________________________________________________________________________
 # Arithmetic Operation
 
 '''
@@ -142,7 +188,7 @@ hasil = (x + y) * z
 print('(',x,'+',y,') *',z,'=',hasil)
 '''
 
-# 9 ________________________________________________________________________
+# ///// 9 ________________________________________________________________________
 # Latihan Program Perhitungan Sederhana
 
 # TEMPERATURE CONVERSION
@@ -165,7 +211,7 @@ print(celcius_temp, "C, is equal to", reamur_temp, "Reamur\n")
 print("Thank You! Hope It Helps!")
 '''
 
-# 10 ________________________________________________________________________
+# ///// 10 ________________________________________________________________________
 # Comparation Operation
 
 # setiap HASIL dari operasi komparasi itu BOOLEAN
@@ -221,7 +267,7 @@ print('x is y =',hasil)
 '''
 
 
-# 11 ________________________________________________________________________
+# ///// 11 ________________________________________________________________________
 # Operasi Logika Boolean
 
 '''
@@ -264,7 +310,7 @@ c = a ^ b
 print(a,' XOR',b,' =',c)
 '''
 
-# 12 ________________________________________________________________________
+# ///// 12 ________________________________________________________________________
 # Latihan Komparasi dan Logika
 
 # SOAL 1
@@ -317,6 +363,7 @@ else:
 
 # +++++++0-------5+++++++8-------11+++++++
 # JAWABAN 2A
+
 '''
 UserInput = float(input("Masukkan angka antara (0 dan 5) atau (8 dan 11): "))
 if( 0 < UserInput < 11):
@@ -336,7 +383,7 @@ else:
     print(True)
 '''
 
-# 13 ________________________________________________________________________
+# ///// 13 ________________________________________________________________________
 # Operator Bitwise
 # BARU SAMPE SINI
 
@@ -344,7 +391,7 @@ else:
 
 
 
-# 58 ________________________________________________________________________
+# ///// 58 ________________________________________________________________________
 # Standard Library 
 '''
 import datetime
