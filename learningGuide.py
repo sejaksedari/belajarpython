@@ -10,6 +10,12 @@ https://stackoverflow.com/questions/51554566/pushing-a-new-file-to-an-existing-g
     - git push
 '''
 
+# Terminal Note
+'''
+cd .. (back 1 folder)
+cd "link of folder" (go to specific folder)
+'''
+
 # ChatGPT Important Note
 
 '''
