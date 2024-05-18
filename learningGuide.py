@@ -5,15 +5,25 @@
 '''
 https://stackoverflow.com/questions/51554566/pushing-a-new-file-to-an-existing-git-repository
     - git status
-    - git add <namafile.js>
+    - git add <namafile.py>
     - git commit -m <message>
     - git push
 '''
 
-# Terminal Note
+# Terminal or Trivia Note
 '''
 cd .. (back 1 folder)
 cd "link of folder" (go to specific folder)
+
+# Cara run py code: atau py "namafile.py"
+# Cara cek versi Python di terminal = "python --version"
+# single line comment: # (commented line)
+# multi line comment: ''' (commented multiline) '''
+# cara mindahin line code: alt + arrow
+# cara copy past line code: alt + + shift + arrow
+
+# Cara ganti multiple value, select char, CTRL + D, highlight lanjutannya
+
 '''
 
 # ChatGPT Important Note
