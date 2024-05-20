@@ -2,6 +2,12 @@
 # INGET GOALS BELAJAR PYTHON
 # Buat understanding logical thinking buat dipake scripting or Automation tools di Blender, Unreal Engine, Houdini, dan Nuke . Jadi next abis paham basic2nya, lgsg cari tutorial Python for "Software Context"
 # Long Term Goal --> LookDev or TD @WetaFX
+
+# Alternative Goal --> Use Python in Jupyter for Data Analysis and Data Visualisation
+
+# azaim216
+# S*j**dicod***99
+
 # Course link: https://www.youtube.com/watch?v=LWIzgB8NOyk&list=PLZS-MHyEIRo59lUBwU-XHH7Ymmb04ffOY&index=60&ab_channel=KelasTerbuka
 
 
@@ -167,11 +173,17 @@ print("Hai", nama, ", karena kamu memilih", inputUser, ", maka kamu =", biner,",
 # //////////////////////////////////////////
 # ///// 8 ARITHMETIC OPERATION ___________________________________________________
 
+# prioritas operasi, operational precedence
+#    1. ()
+#    2. exponen **
+#    3. perkalian dan teman-teman * /  % //
+#    4. pertambahan dan pengurangan + -
 
 
+# Example ...
 '''
 # operasi aritmatika
-# variable declaration
+# variable declaration a & b
 a = 10
 b = 3
 
@@ -199,17 +211,11 @@ print(a,'**',b,'=',hasil)
 hasil = a % b
 print(a,'%',b,'=',hasil)
 
-# operasi floor division //
+# operasi floor division, hasil float dibulatin ke bawah //
 hasil = a // b
 print(a,'//',b,'=',hasil)
 
-# prioritas operasi, operational precedence
-
-#    1. ()
-#    2. exponen **
-#    3. perkalian dan teman-teman * / ** % //
-#    4. pertambahan dan pengurangan + -
-
+# variable declaration z, y, & z
 x = 3
 y = 2
 z = 4
@@ -224,11 +230,12 @@ hasil = (x + y) * z
 print('(',x,'+',y,') *',z,'=',hasil)
 '''
 
-# ///// 9 ________________________________________________________________________
-# Latihan Program Perhitungan Sederhana
+# //////////////////////////////////////////
+# ///// 9 LATIHAN PROGRAM PERHITUNGAN SEDERHANA _____________________________________________
 
 # TEMPERATURE CONVERSION
 
+# Example ...
 '''
 print("Welcome to Temperature Conversion Program!")
 
@@ -247,8 +254,31 @@ print(celcius_temp, "C, is equal to", reamur_temp, "Reamur\n")
 print("Thank You! Hope It Helps!")
 '''
 
-# ///// 10 ________________________________________________________________________
-# Comparation Operation
+# Homerwork Farenheit to Kelvin, Kelvin to Farenheit...
+
+'''
+# Get input in Farenheit, Convert to Kel
+far = float(input("Insert temperature in Farenheit: "))
+print("\n")
+# far --> cel --> kel
+kel = ((5/9) * (far-32)) + 273
+# Print output to Kelvin with 2 float number behind comma "%.2f" % kel
+print(far, "F, is equal to", "%.2f" % kel, "Kelvin\n")
+'''
+
+'''
+# Get input in Kelvin, Convert to Far
+kel = float(input("Insert temperature in Kelvin: "))
+print("\n")
+# kel --> cel --> far
+far = ((kel - 273) / (5/9)) + 32
+# Print output to Farenheit with 2 float number behind comma "%.2f" % far
+print(kel, "F, is equal to", "%.2f" % far, "Farenheit\n")
+'''
+
+
+# //////////////////////////////////////////
+# ///// 10 COMPARATION OPERATION ____________________________________________________________
 
 # setiap HASIL dari operasi komparasi itu BOOLEAN
 # >,<,>=,<=,==,!=
@@ -261,7 +291,9 @@ print("Thank You! Hope It Helps!")
     # a is b = True
     # jadi is itu makan memory banget, tapi lebih customizable 
 
-'''
+
+# Example ...
+# '''
 a = 4
 b = 2
 
@@ -300,7 +332,7 @@ print('nilai x =',x,',id = ',hex(id(x)))
 print('nilai y =',y,',id = ',hex(id(y)))
 hasil = x is y
 print('x is y =',hasil)
-'''
+# '''
 
 
 # ///// 11 ________________________________________________________________________
