@@ -491,4 +491,5 @@ print(f"data count = {data_count}\n")
 print(f"jumlah a = {data_count['a']}\n")
 print(f"jumlah d = {data_count['d']}\n")
 
+#Owyeah
 '''
